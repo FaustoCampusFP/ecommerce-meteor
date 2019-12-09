@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eCommerce - Meteor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cce5f17f71.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="custom-nav-container d-flex align-items-center justify-content-between px-2 py-3 mx-3">
+            <a class="navbar-brand text-clipped" href="{% url 'ecommerce:home' %}">
+                <i class="fas fa-meteor d-flex">
+                    <span class="m-auto">METEOR</span>
+                </i>
+            </a>
+
+            <div class="main-nav-outer d-flex navbar-brand">
+                <i class="fas fa-times text-clipped menu-close-icon d-lg-none"></i>
+
+                <nav class="main-nav navbar navbar-light navbar-expand-lg text-center m-auto">
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ecommerce:catalog' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ecommerce:catalog' %}">Hombres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ecommerce:catalog' %}">Mujeres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ecommerce:catalog' %}">Niños</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ecommerce:catalog' %}">Nuevos Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ecommerce:catalog' %}">Descuentos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nav-icons-container d-flex justify-content-between">
+                <div class="nav-icons">
+                    <a href="#">
+                        <i class="fas fa-search text-clipped"></i>
+                    </a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#">
+                        <i class="fas fa-shopping-bag bag-item-count text-clipped"></i>
+                        <span class="badge">2</span>
+                    </a>
+                </div>
+                <div class="nav-icons">
+                    <div class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-user text-clipped"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <form action="" class="p-2 text-secondary">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Ingresar Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Ingresar Contraseña" required>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdown-checkbox">
+                                    <label for="dropdown-checkbox" class="form-check-label">
+                                        Recuérdame
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-bg my-2">Login</button>
+                            </form>
+                            <div class="dropdown-divider mt-0"></div>
+                            <a href="#" class="dropdown-item">¿No tienes una cuenta? Regístrate</a>
+                            <a href="#" class="dropdown-item">¿Olvidaste tu contraseña? Resetear</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-icons d-lg-none">
+                    <i class="fas fa-bars open-menu-icon text-clipped"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--Start promotions-->
+        <div class="promotions text-white text-center py-2">
+            <span>
+                ¡<span class="text-uppercase font-weight-bold">Envío gratuito</span> en pedidos de €100 o más!
+            </span>
+        </div>
+        <!--End promotions-->
+
+        {% block header %}{% endblock %}
+        
+    </header>
+    <!-- End Header -->
+
+    {% block content %}{% endblock %}
+
+    <!--Start footer-->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <address>
+                        <strong class="h3 font-weight-normal">Meteor Goods</strong> <br>
+                        Calle de Ejemplo 1234<br>
+                        Antártida, 0987
+                        Teléfono: (000) 123-456
+                    </address>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-title">
+                        <h5>Nuestra Misión</h5>
+                        <span class="custom-border"></span>
+                    </div>
+
+                    <ul class="footer-list">
+                        <li>
+                            <a class="footer-link" href="#">Valores Empresariales</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Fundación Juvenil</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Carreras</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Programa de Afiliación</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-title">
+                        <h5>Atención al Cliente</h5>
+                        <span class="custom-border"></span>
+                    </div>
+
+                    <ul class="footer-list">
+                        <li>
+                            <a class="footer-link" href="#">Mi Cuenta</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Costos de Envío & Políticas</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Reembolsos & Devoluciones</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Información de Envíos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="w-100 mt-5">
+
+                <div class="w-100 d-md-flex justify-content-between align-items-center text-center">
+                    <div class="order-2">
+                        <a class="footer-link" href="#">Acerca de</a>
+                        <a class="footer-link ml-3" href="#">Ayuda & Info</a>
+                        <a class="footer-link ml-3" href="#">Política de Privacidad</a>
+                    </div>
+                    <p class="m-0 text-sm order-1">
+                        &copy; 2019 Ingenium Studios - Made with 🧠
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End footer-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'ui.js' %}" crossorigin="anonymous"></script>
+</body>
+
+</html>

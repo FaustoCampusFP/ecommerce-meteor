@@ -1,0 +1,77 @@
+{% extends "base_ecommerce.html" %}
+
+{% load static %}
+
+{% block header %}
+<div class="section-heading h5 text-left mt-2 mb-0 ml-3">
+    <a href="{% url 'ecommerce:catalog' %}">
+        <i class="text-clipped fas fa-caret-left"></i>
+        <span class="text-clipped text-uppercase">Volver al Catálogo</span>
+    </a>
+</div>
+{% endblock header %}
+
+{% block content %}
+    <!--Start Detail-->
+    <section class="detail p-0">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="uppercas detail-item-title d-block d-md-none ml-3">{{ item.title }}</div>
+                    <div class="px-3 my-3 text-center text-md-left">
+                        <div class="detail-item-img mx-auto mx-md-0 mb-3 mt-3">
+                            <img class="img-fluid" src="{{ MEDIA_ROOT }}{{ item.image.url }}" alt="zapato">
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-item-info col-md-6 col-sm-12 px-5">
+                    <div>
+                        <span class="uppercas detail-item-title d-none d-md-block">{{ item.title }}</span><br>
+                        <span class="detail-item-label text-uppercase text-secondary font-weight-bold">
+                            €{{ item.price }} + iva
+                        </span>
+                    </div>
+                    <hr class="w-100">
+                    <div class="detail-item-description">
+                        <div class="my-4">
+                            <span class="detail-item-label text-uppercase text-secondary font-weight-bold">
+                                Color: 
+                            </span> {{ item.color }}
+                        </div>
+                        <div class="my-4">
+                            <span class="detail-item-label text-uppercase text-secondary font-weight-bold">
+                                Tamaño: 
+                            </span> {{ item.size }}
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <span class="detail-item-label text-uppercase text-secondary font-weight-bold">
+                            Cantidad: 
+                        </span>
+                        <div class="d-inline-block">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="detail-item-button">
+                        <button class="btn btn-bg my-2">
+                            Añadir a bolsa <i class="fas fa-shopping-bag"></i>
+                        </button>
+                    </div>
+                    <hr class="w-100">
+                    <div class="my-3">
+                        <span class="detail-item-label text-uppercase text-secondary font-weight-bold">
+                            Descripción: 
+                        </span>
+                        <p>{{ item.description }}</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Detail-->
+{% endblock %}

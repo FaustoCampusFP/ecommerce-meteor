@@ -1,0 +1,373 @@
+{% load static %}
+
+/*global-styles*/
+a{
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:hover{
+    color: #6c757d;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+section{
+    padding: 50px 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    border: none;
+    color: #6c757d;
+}
+
+/*nicer color? #117e3e*/
+.btn-bg{
+    color: #fff;
+    background: linear-gradient(to left, #23d5e3, #9149b9);
+}
+
+.btn-bg:hover{
+    color: #fff;
+    background: linear-gradient(to right, #23d5e3, #9149b9);
+}
+
+.text-clipped{
+    padding: 1px;
+    background: linear-gradient(to bottom, #23d5e3, #9149b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-heading h1{
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+/*end global-styles*/
+
+/*Heder*/
+.custom-nav-container{
+    position: relative;
+    z-index: 1;
+}
+
+.custom-nav-container i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-nav-outer{
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    border-left: 5px solid #eee;
+    z-index: 1500;
+    transition: 650ms all;
+}
+
+.main-nav-outer.open-menu{
+    right: 0;
+}
+
+.menu-close-icon{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.main-nav .nav-link{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-icons-container{
+    width: 100%;
+    max-width: 125px;
+}
+
+.nav-icons-container i:hover{
+    opacity: .7;
+}
+
+.navbar-brand{
+    margin-right: 0;
+}
+.navbar-brand i{
+    font-size: 40px;
+}
+
+.navbar-brand i span{
+    font-size: 20px;
+    font-family: fantasy;
+    font-weight: 100;
+}
+
+.nav-icons > a{
+    position: relative;
+}
+
+.nav-icons > a > .badge{
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    background-color: #9149b9;
+    color: white;
+    border-radius: 100%;
+}
+
+.nav-icons .dropdown-menu{
+    margin-top: 40px;
+    margin-left: -220px;
+    position: relative;
+    background-color: white;
+}
+
+.nav-icons .dropdown-menu::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: inherit;
+    border: inherit;
+    transform: rotate(45deg);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropodown-item{
+    color: #333;
+}
+
+.promotions{
+    background-color: #333;
+    font-size: 14px;
+}
+
+.carousel{
+    z-index: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+    position: absolute;
+    font-size: 15px;
+    top: 45%;
+    width: 42px;
+    height: 42px;
+    background-color: white;
+    opacity: 1;
+}
+
+.carousel-control-prev{
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.carousel-control-next{
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
+/*Large devices: 992px and up*/
+@media (min-width: 992px) {
+    .main-nav-outer{
+        width: initial;
+        height: initial;
+        background-color: initial;
+        position: initial;
+        border: none;
+    }
+
+    .nav-icons .dropdown-menu{
+        margin-left: -260px;
+    }
+
+    .nav-icons .dropdown-menu::before{
+        right:15px;
+    }
+}
+/*end Header*/
+
+/*start Brands*/
+.featured-brands img{
+    max-width: 180px;
+    max-height: 100px;
+    opacity: .5;
+    transition: opacity 650ms;
+}
+
+.featured-brands img:hover{
+    opacity: 1;
+}
+/*end Brands*/
+
+/*start Women's Collection*/
+.hero-img{
+    padding: 15px;
+    margin: auto;
+}
+/*end Women's Collection*/
+
+/*start Arrivals*/
+.arrivals{
+    background-color: #f5f5f5;
+}
+
+.new-arrival-img{
+    max-width: 300px;
+    margin: auto;
+}
+/*end Arrivals*/
+
+/*start Services*/
+.our-services-icon{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 100%;
+}
+
+.our-services-icon::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, #23d5e3, #9149b9);
+}
+
+.our-services-icon i{
+    font-size: 40px;
+}
+
+.our-services-description h5{
+    font-size: 16px;
+}
+
+.our-services-description p{
+    font-size: 14px;
+}
+/*end Services*/
+
+/*start Catalog*/
+.heading-has-bg{
+    background: linear-gradient(to left, rgba(35,213,227,0.7), rgba(145,73,185,07)),
+                url('img/hero/heading-img.jpeg') center no-repeat;
+    height: 30vh;
+    background-size: contain, cover;
+}
+
+.heading-has-bg h1{
+    margin-top: 150px;
+    font-family: fantasy;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.catalog-item-container{
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item-label{
+    position: absolute;
+    bottom: 30px;
+    display: block;
+}
+
+.catalog-item-product-info button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: -25px;
+    display: block;
+}
+/*end Catalog*/
+
+.detail-item-title{
+    font-size: 2rem;
+    font-family: fantasy;
+}
+
+/*start Footer*/
+footer{
+    color: white;
+    background-color: #151515;
+}
+
+.footer-title{
+    position: relative;
+}
+
+.footer-title h5{
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .75);
+}
+
+.custom-border{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.custom-border::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(to bottom, #23d5e3, #9149b9);
+}
+
+.footer-list li{
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    margin: 15px 0;
+    padding: 5px 0;
+}
+
+.footer-list li:last-child{
+    border: none;
+}
+
+.footer-link{
+    color: white !important;
+    transition: opacity 650 ms;
+}
+
+.footer-link:hover{
+    opacity: .6;
+}
+
+footer hr{
+    border-top-color: rgba(255, 255, 255, .1);
+}
+/*end Footer*/

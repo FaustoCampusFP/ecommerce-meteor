@@ -1,0 +1,245 @@
+{% extends "base_ecommerce.html" %}
+
+{% load static %}
+
+{% block header %}
+    <!--Start carousel-->
+    <div class="container mt-5">
+        <div class="carousel slide" id="carousel-indicators" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#carousel-indicators" data-slide-to="0"></li>
+                <li data-target="#carousel-indicators" data-slide-to="1"></li>
+                <li data-target="#carousel-indicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/carousel/carousel-img-1.jpeg' %}" class="img-fluid">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/carousel/carousel-img-2.jpg' %}" class="img-fluid">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/carousel/carousel-img-3.jpeg' %}" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <a href="#carousel-indicators" class="carousel-control-prev" role="buton" data-slide="prev">
+            <i class="fas fa-chevron-left text-clipped"></i>
+            </a>
+            <a href="#carousel-indicators" class="carousel-control-next" role="buton" data-slide="next">
+                <i class="fas fa-chevron-right text-clipped"></i>
+            </a>
+        </div>
+    </div>
+    <!--End carousel-->
+{% endblock header %}
+
+{% block content %}
+    <!--Start brands-->
+    <section class="featured-brands mb-5">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-12 col-sm-6 col-md-2 mb-5">
+                    <a href="#">
+                        <img class="responsive" src="{% static 'img/brands/nike.svg' %}" alt="brand">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 mb-5">
+                    <a href="#">
+                        <img class="responsive" src="{% static 'img/brands/jordan.svg' %}" alt="brand">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 mb-5">
+                    <a href="#">
+                        <img class="responsive" src="{% static 'img/brands/adidas.svg' %}" alt="brand">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 mb-5">
+                    <a href="#">
+                        <img src="{% static 'img/brands/under-armour.svg' %}" alt="brand">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 mb-5">
+                    <a href="#">
+                        <img src="{% static 'img/brands/vans.svg' %}" alt="brand">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 mb-5">
+                    <a href="#">
+                        <img src="{% static 'img/brands/puma.svg' %}" alt="brand">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End brands-->
+
+    <!--Start woman's collection-->
+    <section class="women-collection pt-0">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h1 class="text-clipped text-uppercase">Colección Mujer</h1>
+                <p class="text-secondary">Compra las últimas tendencias</p>
+            </div>
+
+            <div class="row">
+                <div class="hero-img col-12 col-md-6">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/hero/hero1.jpg' %}" alt="hero">
+                    </a>
+                    <div class="mt-2">
+                        <a href="{% url 'ecommerce:catalog' %}">
+                            <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                            <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img col-12 col-md-6">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/hero/hero2.jpg' %}" alt="hero">
+                    </a>
+                    <div class="mt-2">
+                        <a href="{% url 'ecommerce:catalog' %}">
+                            <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                            <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img col-12 col-md-6">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/hero/hero3.jpg' %}" alt="hero">
+                    </a>
+                    <div class="mt-2">
+                        <a href="{% url 'ecommerce:catalog' %}">
+                            <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                            <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img col-12 col-md-6">
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <img src="{% static 'img/hero/hero4.jpg' %}" alt="hero">
+                    </a>
+                    <div class="mt-2">
+                        <a href="{% url 'ecommerce:catalog' %}">
+                            <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                            <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End woman's collection-->
+
+    <!--Start new arrivals-->
+    <section class="arrivals">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h1 class="text-clipped text-uppercase">Los últimos y mejores zapatos</h1>
+                <p class="text-secondary">Compra los últimos lanzamientos</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                    <div class="new-arrival-img mb-3">
+                        <img src="{% static 'img/shoes/shoe1.jpg' %}" alt="shoe">
+                    </div>
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                        <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                    <div class="new-arrival-img mb-3">
+                        <img src="{% static 'img/shoes/shoe2.jpg' %}" alt="shoe">
+                    </div>
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                        <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                    <div class="new-arrival-img mb-3">
+                        <img src="{% static 'img/shoes/shoe3.jpg' %}" alt="shoe">
+                    </div>
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                        <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                    <div class="new-arrival-img mb-3">
+                        <img src="{% static 'img/shoes/shoe4.jpg' %}" alt="shoe">
+                    </div>
+                    <a href="{% url 'ecommerce:catalog' %}">
+                        <span class="text-uppercase font-weight-bold">Nike Air Max</span> <br>
+                        <span>Comprar ahora</span> <i class="fas fa-caret-right"></i>
+                    </a>
+            </div>
+        </div>
+    </section>
+    <!--End new arrivals-->
+
+    <!--Start services-->
+    <section class="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-sm-6 col-md-3 mb-5">
+                    <div class="our-services-icon d-flex mb-3 mx-auto">
+                        <i class="fas fa-shipping-fast text-clipped m-auto"></i>
+                    </div>
+                    <div class="our-services-description">
+                        <h5 class="text-uppercase font-weight-bold">Envío gratis a todo el mundo</h5>
+                        <p>Envío gratuito para pedidos superiores a 100 €</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-5">
+                    <div class="our-services-icon d-flex mb-3 mx-auto">
+                        <i class="fas fa-sync text-clipped m-auto"></i>
+                    </div>
+                    <div class="our-services-description">
+                        <h5 class="text-uppercase font-weight-bold">Garantía de reembolso</h5>
+                        <p>Devolvemos el dinero dentro de los 30 días de la compra</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-5">
+                    <div class="our-services-icon d-flex mb-3 mx-auto">
+                        <i class="fas fa-headset text-clipped m-auto"></i>
+                    </div>
+                    <div class="our-services-description">
+                        <h5 class="text-uppercase font-weight-bold">Atención al cliente 24/7</h5>
+                        <p>Atención al cliente 24/7 por varios canales</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-5">
+                    <div class="our-services-icon d-flex mb-3 mx-auto">
+                        <i class="fas fa-credit-card text-clipped m-auto"></i>
+                    </div>
+                    <div class="our-services-description">
+                        <h5 class="text-uppercase font-weight-bold">Pagos seguros online</h5>
+                        <p>Utilizamos la mejor encriptación de datos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+            <a href="#">
+                <span class="font-weight-bold">Más información</span> <i class="fas fa-caret-right"></i>
+            </a>
+        </div>
+        </div>
+    </section>
+    <!--End services-->
+<!-- 
+    <a class="active item" href="{% url 'ecommerce:catalog' %}">
+        <button class="ui inverted green button">Ir a catalogo</button>
+    </a>
+-->
+{% endblock %}

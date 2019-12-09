@@ -1,0 +1,54 @@
+{% extends "base_ecommerce.html" %}
+
+{% load static %}
+
+{% block content %}
+    <!--Start Catalog-->
+    <section class="catalogo p-0">
+        <div class="heading-has-bg d-flex">
+            <div class="container">
+                <h1 class="text-uppercase">Catálogo</h1>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                {% for item in items %}
+                <div class="col-12 col-lg-4 col-sm-6 d-flex align-items-stretch">
+                        <div class="px-3 my-3 text-center text-md-left card shadow-sm">
+                            <a href="{% url 'ecommerce:detail' item.pk %}">
+                                <div class="catalog-item-img mx-auto mx-md-0 mb-3 mt-3">
+                                    <img class="img-fluid" src="{{ MEDIA_ROOT }}{{ item.image.url }}" alt="zapato">
+                                </div>
+                                <div class="catalog-item-product-info card-body">
+                                    <h5 class="uppercase card-title mb-5">{{ item.title }}</h5>
+                                        <span class="catalog-item-label text-uppercase text-secondary font-weight-bold">
+                                            {{ item.price }}€
+                                        </span>
+                                    <p class="card-text">
+                                        <span class="catalog-item-label text-uppercase text-secondary font-weight-bold">
+                                            {{ item.price }}€
+                                        </span>
+                                    </p>
+                                    <button class="btn btn-bg my-2">Ver Producto</button>
+                                </div>
+                            </a>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--End Catalog-->
+{% endblock %}
+
+
+
+<!--
+{% for item in items %}
+    {{ item }}
+{% endfor %}
+
+<a class="active item" href="{% url 'ecommerce:home' %}">
+    <button class="ui inverted green button">Home</button>
+</a>-->
